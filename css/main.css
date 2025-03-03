@@ -1,0 +1,10 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@font-face { font-family: TokyoGeisha; src: url(../assets/fonts/TokyoGeisha.otf); }
+@font-face { font-family: Tokyo; src: url(../assets/fonts/Tokyo.otf); }
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}

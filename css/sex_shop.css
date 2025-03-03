@@ -1,0 +1,77 @@
+@import url(main.css);
+@import url(normalize.css);
+
+:root{
+    --ss-text-color: #ee212b;
+}
+
+.sex_shop-description{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2rem;
+}
+.sex_shop-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sex_shop-image img{
+    max-width: 80%;
+}
+.sex_shop-quote{
+    font-size: 1.5vw;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.75rem;
+    letter-spacing: .2rem;
+    color: var(--ss-text-color);
+    margin-bottom: 2rem;
+}
+.sex_shop-prod_list{
+    font-size: 1.25vw;
+    text-align: center;
+    color: white;
+    list-style: none;
+    letter-spacing: .1rem;
+}
+.sex_shop-prod_list li i{
+    display: inline;
+    vertical-align: middle;
+    padding-right: .75rem;
+    font-size: 2.25vw;
+    color: var(--ss-text-color);
+    text-shadow: 1px 1px 2px white;
+}
+
+/* TABLET */
+@media (max-width:800px) {
+    .sex_shop-image img{
+        max-width: 90%;
+    }
+    .sex_shop-quote{
+        font-size: 1.75vw;
+        line-height: 1rem;
+        margin-bottom: 1rem;
+    }
+    .sex_shop-prod_list{
+        font-size: 1.5vw;
+        letter-spacing: .15rem;
+    }
+}
+
+/* MOBILE */
+@media (max-width:400px) {
+    .sex_shop-description{
+        display: block;
+    }
+    .sex_shop-image img{
+        max-width: 66%;
+    }
+    .sex_shop-quote{
+        font-size: 3.25vw;
+        line-height: 1rem;
+    }  
+    .sex_shop-prod_list{
+        font-size: 2.75vw;
+    }      
+}

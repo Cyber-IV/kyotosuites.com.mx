@@ -1,0 +1,49 @@
+@import url(main.css);
+@import url(normalize.css);
+
+.slideshow-container{
+    max-width: 100%;
+    position: relative;
+}
+.slides{
+    display: none;
+}
+.slides img{
+    width: 100%;
+}
+
+.rooms_info-layout > .room > .slideshow-container > .slides img{
+    height: 10rem;
+}
+
+/* TABLET */
+@media (max-width:800px) {
+    #main_slider > .slides img{
+        height: 18rem;
+    }
+    .rooms_info-layout > .room > .slideshow-container > .slides img{
+        height: 6rem;
+    }
+}
+
+/* MOBILE */
+@media (max-width:400px) {
+    #main_slider > .slides img{
+        height: 12rem;
+    }
+    .rooms_info-layout > .room > .slideshow-container > .slides img{
+        height: 10rem;
+    }
+}
+
+/* ANIMATIONS */
+
+
+.fade{
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@keyframes fade {
+    from {opacity: .3;}
+    to {opacity: 1;}
+}

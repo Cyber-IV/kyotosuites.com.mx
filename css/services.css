@@ -1,0 +1,72 @@
+@import url(main.css);
+@import url(normalize.css);
+:root{
+    --background-color: #9a0008;
+    --font-color: white;
+}
+
+.services-container{
+    max-width: 100%;
+    background-color: var(--background-color);
+}
+
+.services{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;    
+    padding: 1.5rem;
+}
+
+.service{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--font-color);
+}
+
+.service i{
+    font-size: 4vw;
+}
+
+.service .service_text{
+    font-family: TokyoGeisha;
+    letter-spacing: .1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: 2vw;
+}
+
+/* TABLET */
+@media (max-width: 800px) {
+    .services{
+        gap: 1rem;    
+        padding: 1.5rem;
+    }
+
+    .service .service_text{
+        line-height: 1rem;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 400px) {
+    .services{
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .service{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .75rem;
+        margin: 0.5rem;
+    }
+    .service i{
+        font-size: 8vw;
+    }
+    .service .service_text{
+        font-size: 4vw;
+    }
+}
