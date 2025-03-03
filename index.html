@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/main_body.css">
+    <link rel="stylesheet" href="css/about_us.css">
+    <link rel="stylesheet" href="css/rooms_info.css">
+    <link rel="stylesheet" href="css/sex_shop.css">
+    <link rel="stylesheet" href="css/restaurant.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <title>Kyoto Suites</title>
+</head>
+<body>
+    <header>
+        <div class="header_logo">
+            <a href="" class="logo_container">
+                <img src="assets/images/logo.jfif" alt="">
+            </a>
+        </div>
+
+        <nav id="navigationID" class="navigation mobile_overlay">
+            <a href="javascript:void(0)" class="close_overlay-btn" onclick="closeNav()">x</a>
+
+            <ul class="navigation_menu mobile_overlay-content">
+                <li class="navigation_menu-option">
+                    <a class="option_container">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span class="option_description">INICIO</span>
+                    </a>
+                </li>
+                <li class="navigation_menu-option">
+                    <a class="option_container">
+                        <i class="bi bi-people-fill"></i>
+                        <span class="option_description">NOSOTROS</span>
+                    </a>
+                </li>
+                <li class="navigation_menu-option">
+                    <a class="option_container">
+                        <i class="bi bi-building-fill"></i>
+                        <span class="option_description">HABITACIONES</span>
+                    </a>
+                </li>
+                
+                <a href="index.html" class="navigation_menu-logo">
+                    <div class="logo_container">
+                        <img src="assets/images/logo_inverted.png" alt="">
+                    </div>
+                </a>
+
+                <li class="navigation_menu-option">
+                    <a class="option_container">
+                        <i class="bi bi-bag-heart-fill"></i>
+                        <span class="option_description">SEX SHOP</span>
+                    </a>
+                </li>
+                <li class="navigation_menu-option">
+                    <a class="option_container">
+                        <i class="bi bi-0-circle-fill"></i>
+                        <span class="option_description">RESTAURANT</span>
+                    </a>
+                </li>
+                <li class="navigation_menu-option">
+                    <a class="option_container">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span class="option_description">UBICACION</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="open_menu">
+            <button class="open_menu-btn" onclick="openNav()">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="main_slider" class="slideshow-container">
+        <div class="slides fade">
+            <img src="/assets/images/slideshow/img_lights_wide.jpg" alt="">
+        </div>
+
+        <div class="slides fade">
+            <img src="/assets/images/slideshow/img_mountains_wide.jpg" alt="">
+        </div>
+
+        <div class="slides fade">
+            <img src="/assets/images/slideshow/img_nature_wide.jpg" alt="">
+        </div>
+
+        <div class="slides fade">
+            <img src="/assets/images/slideshow/img_snow_wide.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="services-container">
+        <ul class="services">
+            <li class="service">
+                <i class="bi bi-wifi"></i>
+                <p class="service_text">Internet Inalambrico</p>
+            </li>
+            <li class="service">
+                <i class="bi bi-0-circle-fill"></i>
+                <p class="service_text">Partidos de Futbol</p>
+            </li>
+            <li class="service">
+                <i class="bi bi-tv"></i>
+                <p class="service_text">Canales Premium</p>
+            </li>
+            <li class="service">
+                <i class="bi bi-p-square"></i>
+                <p class="service_text">Estacionamiento Privado</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="m_body">
+            <section class="about_us">
+                <div class="section-title">
+                    <i class="about_us-left_icon bi bi-0-circle-fill"></i>
+                    <p class="about_us-title_text">NOSOTROS</p>
+                    <i class="about_us-right_icon bi bi-0-circle-fill"></i>
+                </div>
+
+                <div class="about_us-description">
+                    <div id="about_us_slider" class="about_us-slideshow">
+                        <div class="slides fade">
+                            <img src="/assets/images/slideshow_about_us/about_us_01.jpg" alt="">
+                        </div>
+                
+                        <div class="slides fade">
+                            <img src="/assets/images/slideshow_about_us/about_us_02.jpg" alt="">
+                        </div>
+                
+                        <div class="slides fade">
+                            <img src="/assets/images/slideshow_about_us/about_us_03.jpg" alt="">
+                        </div>
+                
+                        <div class="slides fade">
+                            <img src="/assets/images/slideshow_about_us/about_us_04.jpg" alt="">
+                        </div>
+                    </div>
+                    <p class="about_us-text">
+                        Kyoto Suites es una empresa dedicada a prestar servicios de estancia con la mayor calidad en inmobiliario y la tecnología adecuada para cada suite, 
+                        ya que cada una de nuestras habitaciones cuenta con todo lo necesario para hacer de tu visita un momento inolvidable.
+                        Contamos con habitaciones totalmente equipadas para tu confort.
+                        Disfruta de un momento agradable y calido en cualquiera de nuestras habitaciones.
+                        Ademas contamos con un amplio Menu de bebidas y alimentos preparados a tu gusto.
+                        <br><br>
+                        <span class="about_us-quote">
+                            Visitanos y danos la oportunidad de brindarte la atencion y servicio que te mereces.
+                        </span>
+                    </p>
+                </div>
+            </section>
+
+            <section class="rooms_info">
+                <div class="section-title">
+                    <i class="rooms_info-left_icon bi bi-0-circle-fill"></i>
+                    <div class="rooms_info-title_text">HABITACIONES</div>
+                    <i class="rooms_info-right_icon bi bi-0-circle-fill"></i>
+                </div>
+
+                <div class="rooms_info-common_traits">
+                    <p class="common_traits-main_quote">TODAS NUESTRAS HABITACIONES CUENTAN CON:</p>
+                    <ul class="common_traits-list">
+                        <li class="trait first-grid-row">Pantalla</li>
+                        <li class="trait first-grid-row">WI-FI</li>
+                        <li class="trait first-grid-row">Rockola</li>
+                        <li class="trait second-grid-row">DVD</li>
+                        <li class="trait second-grid-row">Telefono</li>
+                        <li class="trait second-grid-row">Musica</li>
+                    </ul>
+                </div>
+                <div id="rooms_slider" class="rooms_info-layout">
+                    <div class="room column_1-3">
+                        <h4 class="room-title">Suite "Kamasutra"</h4>
+                        <div id="room_kama-slider" class="slideshow-container">
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_lights_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_mountains_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_nature_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_snow_wide.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="room-description">Sillon kamasutra</p>
+                        <button class="room-booking-btn">Reservacion</button>
+                    </div>
+                    <div class="room column_3-5">
+                        <h4 class="room-title">Suite "Relajacion"</h4>
+                        <div id="room_relax-slider" class="slideshow-container">
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_lights_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_mountains_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_nature_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_snow_wide.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="room-description">Cuarto de vapor</p>
+                        <button class="room-booking-btn">Reservacion</button>
+                    </div>
+                    <div class="room column_5-7">
+                        <h4 class="room-title">Suite "Jacuzzi"</h4>
+                        <div id="room_jacuzzi-slider" class="slideshow-container">
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_lights_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_mountains_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_nature_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_snow_wide.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="room-description">Jacuzzi con hidromasaje</p>
+                        <button class="room-booking-btn">Reservacion</button>
+                    </div>
+                    <div class="room column_2-4">
+                        <h4 class="room-title">Suite "Master Double"</h4>
+                        <div id="room_double-slider" class="slideshow-container">
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_lights_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_mountains_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_nature_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_snow_wide.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="room-description">
+                            Conjuntos para 2 parejas
+                            <br>
+                            Jacuzzi con hidromasaje
+                            <br>
+                            Cuarto de vapor
+                            <br>
+                            Mesa de billar
+                        </p>
+                        <button class="room-booking-btn">Reservacion</button>
+                    </div>
+                    <div class="room column_4-6">
+                        <h4 class="room-title">Suite "Premium"</h4>
+                        <div id="room_premium-slider" class="slideshow-container">
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_lights_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_mountains_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_nature_wide.jpg" alt="">
+                            </div>
+                    
+                            <div class="slides fade">
+                                <img src="/assets/images/slideshow/img_snow_wide.jpg" alt="">
+                            </div>
+                        </div>
+                        <p class="room-description">
+                            Jacuzzi con hidromasaje
+                            <br>
+                            Cuarto de vapor
+                            <br>
+                            Mesa de billar
+                            <br>
+                            Alberca
+                        </p>
+                        <button class="room-booking-btn">Reservacion</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sex_shop">
+                <div class="section-title">
+                    <i class="sex_shop-left_icon bi bi-0-circle-fill"></i>
+                    <p class="sex_shop-title_text">SEX SHOP</p>
+                    <i class="sex_shop-right_icon bi bi-0-circle-fill"></i>
+                </div>
+
+                <div class="sex_shop-description">
+                    <div class="sex_shop-image">
+                        <img src="assets/images/sex-shop_main-image.jpg">
+                    </div>
+                    <div class="sex_shop-text">
+                        <p class="sex_shop-quote">
+                            Consulta nuestro catalogo para ver los nuevos articulos a la venta.
+                            <br>
+                            Contamos con el servicio de venta de Lenceria y Sex Shop a la carta.
+                        </p>
+
+                        <ul class="sex_shop-prod_list">
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Retardadores en crema, spray o liga
+                            </li>
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Lubricante Anal Desensibilizador
+                            </li>
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Fragancias intimas estimulantes
+                            </li>
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Lubricantes de sabor natural
+                            </li>
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Estimulante en gotas natural
+                            </li>
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Aceite para masaje con sabor
+                            </li>
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Crema para la ereccion
+                            </li>
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Mini vibrador
+                            </li>
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Levitra
+                            </li>
+                            <li class="sex_shop-prod_item">
+                                <i class="bi bi-arrow-through-heart-fill"></i>Cialis
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="restaurant">
+                <div class="section-title">
+                    <i class="restaurant-left_icon bi bi-0-circle-fill"></i>
+                    <p class="restaurant-title_text">RESTAURANT</p>
+                    <i class="restaurant-right_icon bi bi-0-circle-fill"></i>
+                </div>
+
+                <div class="restaurant-description">
+                    <div class="restaurant-text">
+                        <span class="restaurant_simple-quote">Lo mejor de nuestra cocina para ti.</span>
+                        <br><br>
+                        Kyoto Suites cuenta con un completo Restaurant-Bar en donde personal altamente 
+                        capacitado estara para atenderle rapida y eficientemente, ademas nuestra seleccion 
+                        de vinos y licores nacionales e importados estaran para satisfacer al gusto mas refinado.
+                        <br><br>
+                        <span class="restaurant_main_quote">Servicio de Restaurant-Bar <br> TODO EL DIA</span>
+                        <br><br>
+                        Marca desde tu habitacion a cualquier hora del dia o noche y disfruta 
+                        de una exquisita comida preparada al momento con los mas frescos 
+                        y selectos ingredientes de nuestra cocina.
+                    </div>
+
+                    <div class="restaurant-image">
+                        <img src="assets/images/restaurant_main-image.jpg">
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact">
+                <div class="section-title">
+                    <i class="contact-left_icon bi bi-0-circle-fill"></i>
+                    <p class="contact-title_text">CONTACTO</p>
+                    <i class="contact-right_icon bi bi-0-circle-fill"></i>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-address_info">
+                        <img src="/assets/images/logo.png" alt="">
+                        <a href="https://www.google.com/maps/place/Motel+Kyoto/@25.564155,-100.2345776,15.5z/data=!4m9!3m8!1s0x8662c75364133e35:0x178e9dad5264cb39!5m2!4m1!1i2!8m2!3d25.5621407!4d-100.2360107!16s%2Fg%2F11bw4sk_mz?hl=es-419&entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                           <p>
+                                Carretera Nacional Km. 266 <br>
+                                La Estanzuela <br>
+                                Monterrey, Nuevo Leon <br>
+                                Frente a C5 <br>
+                                Tel. 1099 4091
+                            </p> 
+                        </a>
+                    </div>
+                    <div id="contact-map"></div>
+
+                    <div class="contact-form_container">
+                        <div class="section-title">
+                            <p class="contact-form_text-title">DUDAS O COMENTARIOS?</p>
+                        </div>
+                        <form class="contact-form" action="">
+                            <label for="email">Correo</label>
+                            <input type="email" id="email" placeholder="Correo electronico">
+
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" placeholder="Escriba su mensaje..."></textarea>
+
+                            <input type="submit" value="Enviar">
+                        </form>
+                    </div>
+                </div>
+                
+            </section>
+    </div>
+
+    <script src="js/map.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/slideshow.js"></script>
+</body>
+</html>
