@@ -8,6 +8,11 @@
     padding: 2.5rem 8rem;
 }
 
+.quote, .room-title{
+    font-family: TokyoGeisha;
+    letter-spacing: .1rem !important;
+}
+
 section{
     margin-bottom: 8rem;
 }
