@@ -1,7 +1,7 @@
 window.addEventListener('load', onWndLoad, false);
 
 function onWndLoad() {
-    var slider = document.querySelector('.slider');
+    var slider = document.getElementById('rooms_slider')
     var sliders = slider.children;
    
     var initX = null;  
@@ -15,7 +15,7 @@ function onWndLoad() {
     var Y_DIS = 10;
     var TRANS_DUR = 0.4;
   
-    var images=document.querySelectorAll('img');
+    var images = document.querySelectorAll('.room');
     for(var i=0;i<images.length;i++)
     {
         images[i].onmousemove=function(e){
@@ -88,7 +88,7 @@ function onWndLoad() {
 
         initX =mouseX;
         e.preventDefault();
-        if (Math.abs(transX) >= curSlide.offsetWidth-30) {
+        if (Math.abs(transX) >= curSlide.offsetWidth-50) {
            
             document.removeEventListener('mousemove', slideMouseMove, false);
             document.removeEventListener('touchmove', slideMouseMove, false);
