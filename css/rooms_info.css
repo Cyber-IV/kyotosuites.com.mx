@@ -120,42 +120,7 @@
         font-size: 4vw;
     }
 
-
-    @-webkit-keyframes animation{
-        from{
-            opacity:0; 
-            -webkit-transform:scale(1.2) rotateX(45deg);
-            transform:scale(1.2) rotateX(45deg);
-        } to{ }
-    }
-    @keyframes animation{
-        from{
-            opacity:0; 
-            -webkit-transform:scale(1.2) rotateX(45deg);
-            transform:scale(1.2) rotateX(45deg);
-        } to{ }
-    }
-    
-    @-webkit-keyframes animation2{
-        from{
-            opacity:0; 
-            -webkit-transform:scale(1.2) rotateX(45deg);
-            transform:scale(1.2) rotateX(45deg);
-        } to{ }
-    }
-    @keyframes animation2{
-        from{
-            opacity:0; 
-            -webkit-transform:scale(1.2) rotateX(45deg);
-            transform:scale(1.2) rotateX(45deg);
-        } to{ }
-    }
-
     #rooms_slider{
-        -webkit-animation:animation ease 1s;
-        animation:animation ease 1s;
-        animation-fill-mode:backwards;
-
         height:340px;
         max-width:100%;
 
