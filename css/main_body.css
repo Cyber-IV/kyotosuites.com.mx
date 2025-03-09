@@ -5,7 +5,6 @@
 .m_body{
     background-color: var(--main-bg-color);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    padding: 2.5rem 8rem;
 }
 
 .quote, .room-title{
@@ -13,34 +12,16 @@
     letter-spacing: .1rem !important;
 }
 
-section{
-    margin-bottom: 8rem;
-}
 .section-title{
     display: flex;
     justify-content: center;
     color: var(--ri-text-color);
-    column-gap: 2rem;
-    font-size: 3.5vw;
     letter-spacing: .1rem;
-    margin-bottom: 2.5rem;
     font-family: TokyoGeisha !important;
 }
 
-@media (max-width:800px) {
-    .m_body{
-        padding: 2rem 4rem;
-    }
-    section{
-        margin-bottom: 5rem;
-    }
-    .section-title{
-        font-size: 4.5vw;
-        margin-bottom: 1.5rem;
-    }
-}
-
-@media (max-width:400px) {
+/* MOBILE */
+@media (max-width:480px) {
     .m_body{
         padding: 1.5rem 2rem;
     }
@@ -51,5 +32,36 @@ section{
         column-gap: 1rem;
         font-size: 5.5vw;
         margin-bottom: 1rem;
+    }
+}
+
+/* TABLET */
+@media (min-width:481px) and (max-width:768px) {
+    .m_body{
+        padding: 2rem 4rem;
+    }
+    section{
+        margin-bottom: 5rem;
+    }
+    .section-title{
+        column-gap: 1.5rem;
+        font-size: 4.5vw;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:769px){
+    .m_body{
+        padding: 2.5rem 8rem;
+    }
+    
+    section{
+        margin-bottom: 8rem;
+    }
+    .section-title{
+        column-gap: 2rem;
+        font-size: 3.5vw;
+        margin-bottom: 2.5rem;
     }
 }
