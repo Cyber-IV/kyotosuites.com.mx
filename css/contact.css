@@ -77,12 +77,36 @@ input[type=submit]:hover {
     .contact-address_info > img{
         max-width: 25%;
     }
-    .contact-address_info > a > p{
+    .contact-address_info > div > p{
         text-align: center;
         color: white;
-        text-decoration: underline white;
         font-size: 2.75vw;
         letter-spacing: .1rem;
+    }
+    .contact-address_info-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-address_info-details > a{
+        color: white;
+    }
+    .contact-address_info-details > a{
+        background-color: var(--c-text-color);
+        text-decoration: none;
+        margin-top: .6rem;
+        padding: .3rem .6rem;
+        border-radius: .3rem;
+        font-size: 4.5vw;
+    }
+    .contact-address_info-details > a > i{
+        color: white;
+        font-size: 5vw;
+    }
+    .contact-address_info-details > a:hover{
+        text-decoration: underline white;
+        background-color: var(--c-text-color-hover);
+        scale: 110%;
     }
 
     input[type=email], input[type=submit], select, textarea {
