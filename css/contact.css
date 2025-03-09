@@ -9,76 +9,54 @@
 .contact-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 4rem;
-}
-
-.contact-address_info{
-    display: none;
 }
 
 #contact-map{
     max-width: 100%;
 }
 
-.contact-form_container{
-    text-align: left;
+.contact-address_info{
+    display: none;
 }
+
 .contact-form_text-title{
     color: white;
-    font-size: 2vw;
 }
 .contact-form > label{
     color: white;
-    font-size: 1.25rem;
 }
 
-input[type=email], select, textarea {
+input[type=email], textarea {
     width: 100%;
-    padding: .6rem;
     border: .15rem solid var(--c-text-color);
-    border-radius: .2rem;
+    resize: vertical;
+
+    padding: .6rem;
+    border-radius: .3rem;
     margin-top: .6rem;
     margin-bottom: 1.2rem;
-    resize: vertical;
 }
   
 input[type=submit] {
     background-color: var(--c-text-color);
     color: white;
-    padding: .8rem 1rem;
     border: none;
-    border-radius: .4rem;
     cursor: pointer;
+
+    padding: .8rem 1rem;
+    border-radius: .4rem;
 }
-  
+
 input[type=submit]:hover {
     background-color: var(--c-text-color-hover);
 }
 
-/* TABLET */
-@media (max-width:800px) {
-    .contact-info{
-        column-gap: 2rem;
-    }
 
-    .contact-form_text-title{
-        font-size: 2.75vw;
-    }
-    .contact-form > label{
-        font-size: 2.25vw;
-    }
-
-    input[type=email], input[type=submit], select, textarea {
-        font-size: 1.5vw;
-    }
-}
 
 /* MOBILE */
-@media (max-width:400px) {
+@media (max-width:480px) {
     .contact-info{
         display: block;
-        grid-template-columns: 1fr;
-        row-gap: 1rem;
     }
 
     .contact-address_info{
@@ -87,24 +65,69 @@ input[type=submit]:hover {
         align-items: center;
         margin-bottom: 1rem;
     }
+    .contact-form_container{
+        text-align: center;
+    }
+    .contact-form_text-title{
+        font-size: 4.25vw;
+    }
+    .contact-form > label{
+        font-size: 3.5vw;
+    }
     .contact-address_info > img{
         max-width: 25%;
     }
     .contact-address_info > a > p{
+        text-align: center;
         color: white;
+        text-decoration: underline white;
         font-size: 2.75vw;
         letter-spacing: .1rem;
-        text-decoration: underline white;
-    }
-
-    .contact-form_text-title{
-        font-size: 3.5vw;
-    }
-    .contact-form > label{
-        font-size: 2.75vw;
     }
 
     input[type=email], input[type=submit], select, textarea {
-        font-size: 3vw;
+        font-size: 3.5vw;
+    }
+}
+
+/* TABLET */
+@media (min-width:481px) and (max-width:768px) {
+    .contact-info{
+        column-gap: 2rem;
+    }
+
+    .contact-form_container{
+        text-align: center;
+    }
+    .contact-form_text-title{
+        font-size: 2.5vw;
+    }
+    .contact-form > label{
+        font-size: 2.25vw;
+    }
+
+    input[type=email], input[type=submit], select, textarea {
+        font-size: 2vw;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:769px){
+    .contact-info{
+        column-gap: 4rem;
+    }
+    
+    .contact-form_container{
+        text-align: left;
+    }
+    .contact-form_text-title{
+        font-size: 2.5vw;
+    }
+    .contact-form > label{
+        font-size: 1.25rem;
+    }
+
+    input[type=email], input[type=submit], select, textarea {
+        font-size: 1.2vw;
     }
 }
