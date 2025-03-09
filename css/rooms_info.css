@@ -8,7 +8,6 @@
 .common_traits-main_quote{
     text-align: center;
     color: var(--ri-text-color);
-    font-size: 2vw;
     margin-bottom: 1rem;
 }
 .common_traits-list{
@@ -16,13 +15,11 @@
     justify-content: space-between;
     list-style: none;
     color: var(--ri-text-color);
-    font-size: 1.5vw;
 }
 .trait{
     border: 3px solid var(--ri-text-color);
     border-radius: 50%;
     background-color: white;
-    padding: 1rem;
 }
 
 /* ROOMS ORDER */
@@ -31,14 +28,20 @@
 .column_5-7{ grid-column: 5/7; }
 .column_2-4{ grid-column: 2/4; }
 .column_4-6{ grid-column: 4/6; }
+
 .rooms_info-layout{
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    column-gap: 2rem;
-    row-gap: 2rem;
+    column-gap: 1.75rem;
+    row-gap: 1.75rem;
 }
 .room{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+
     text-align: center;
     border: var(--ri-text-color) 2px solid;
     background-color: white;
@@ -50,11 +53,8 @@
 .room-title{
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.5vw;
 }
-.room-description{
-    font-size: 1.25vw;
-}
+
 .room-booking-btn{
     background-color: var(--ri-text-color);
     color: white;
@@ -68,21 +68,8 @@
 }
 
 
-/* TABLET */
-@media (max-width:800px) {
-    .common_traits-main_quote{
-        font-size: 2.75vw;
-    }
-    .common_traits-list{
-        font-size: 2.25vw;
-    }
-    .trait{
-        padding: .5rem;
-    }    
-}
-
 /* MOBILE */
-@media (max-width:400px) {
+@media (max-width:480px) {
     .rooms_info{
         margin-bottom: 5.5rem;
     }
@@ -98,6 +85,9 @@
         text-align: center;
         font-size: 3.5vw;
     }
+    .trait{
+        padding: .5rem;
+    }
 
     .first-grid-row{
         grid-row: 1/2;
@@ -106,34 +96,20 @@
         grid-row: 2/3;
     }
 
-    .rooms_info-layout{
-        display: block;
-    }
-    .rooms_info-title{
-        font-size: 5.5vw;
-    }
-
-    .room-title{
-        font-size: 4.5vw;
-    }
-    .room-description{
-        font-size: 4vw;
-    }
-
+    /* SLIDER STYLE */
     #rooms_slider{
-        height:340px;
+        height:360px;
         max-width:100%;
 
         perspective:2000px;
         transition:ease-in-out .2s;
     }
-
     .room{
         -webkit-user-select:none;
         user-select:none;
         -moz-user-select:none;
         position:absolute;
-        height:340px;
+        height:360px;
         max-width:100%;
 
         box-shadow: 0px 10px 30px 0px rgba(128, 128, 128, 0.3);
@@ -149,7 +125,6 @@
         justify-content: center;
         align-items: center;
     }
-
     .room > .slidershow-container > img{ 
         text-align:center;
         max-width:100%; 
@@ -158,16 +133,76 @@
         -moz-user-drag:none; 
         border-radius:1rem; 
     }
-
     .room > .room_title{
-        font-family:TokyoGeisha; 
         font-size:5vw;
         margin-top:.5rem;
     }
-
     .transition {
         -webkit-transition: cubic-bezier(0,1.95,.49,.73) .4s ;
         -moz-transition: cubic-bezier(0,1.95,.49,.73) .4s ;
         transition: cubic-bezier(0,1.95,.49,.73) .4s ;
+    }
+
+    .rooms_info-layout{
+        display: block;
+    }
+    .rooms_info-title{
+        font-size: 5.5vw;
+    }
+
+    .room-title{
+        font-size: 4.5vw;
+    }
+    .suite-word{
+        display: inline;
+    }
+    .room-description{
+        font-size: 4vw;
+    }
+}
+
+/* TABLET */
+@media (min-width:481px) and (max-width:768px) {
+    .common_traits-main_quote{
+        font-size: 2.75vw;
+    }
+    .common_traits-list{
+        font-size: 2.25vw;
+    }
+    .trait{
+        padding: .5rem;
+    }  
+
+    .room-title{
+        font-size: 1.5vw;
+    }
+    .suite-word{
+        display: block;
+    }
+    .room-description{
+        font-size: 1.5vw;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:769px){
+    .common_traits-main_quote{
+        font-size: 2vw;
+    }
+    .common_traits-list{
+        font-size: 1.5vw;
+    }
+    .trait{
+        padding: 1rem;
+    }  
+
+    .room-title{
+        font-size: 1.5vw;
+    }
+    .suite-word{
+        display: block;
+    }
+    .room-description{
+        font-size: 1.35vw;
     }
 }
