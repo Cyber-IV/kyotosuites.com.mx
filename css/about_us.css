@@ -8,25 +8,38 @@
 .about_us-description{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: 6rem;
 }
 .about_us-text{
     display: grid;
     align-items: center;
     align-content: center;
-    font-size: 1.25vw;
     text-align: center;
     color: white;
 }
 .about_us-text .about_us-quote{
-    font-size: 1.75vw;
     text-align: center;
     color: var(--au-text-color);
 }
 
+/* MOBILE */
+@media (max-width:480px) {
+    .about_us-description{
+        display: block;
+    }
+    .about_us-slideshow{
+        max-width: 75%;
+        margin: 0 auto 1.25rem auto;
+    }
+    .about_us-text{
+        font-size: 2.75vw;
+    }
+    .about_us-text .about_us-quote{
+        font-size: 3.25vw;
+    }
+}
 
 /* TABLET */
-@media (max-width:800px) {
+@media (min-width:481px) and (max-width:768px) {
     .about_us-description{
         column-gap: 2rem;
     }
@@ -43,19 +56,15 @@
     }
 }
 
-/* MOBILE */
-@media (max-width:400px) {
+/* DESKTOP */
+@media (min-width:769px){
     .about_us-description{
-        display: block;
-    }
-    .about_us-slideshow{
-        max-width: 75%;
-        margin: 0 auto 1.25rem auto;
+        column-gap: 6rem;
     }
     .about_us-text{
-        font-size: 2.75vw;
+        font-size: 1.25vw;
     }
     .about_us-text .about_us-quote{
-        font-size: 3.25vw;
+        font-size: 1.75vw;
     }
 }
