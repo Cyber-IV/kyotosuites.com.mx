@@ -33,16 +33,15 @@
 }
 
 input[type=email], select, textarea {
-    width: 100%; /* Full width */
-    padding: .6rem; /* Some padding */ 
-    border: .15rem solid var(--c-text-color); /* Gray border */
-    border-radius: .2rem; /* Rounded borders */
-    margin-top: .6rem; /* Add a top margin */
-    margin-bottom: 1.2rem; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    width: 100%;
+    padding: .6rem;
+    border: .15rem solid var(--c-text-color);
+    border-radius: .2rem;
+    margin-top: .6rem;
+    margin-bottom: 1.2rem;
+    resize: vertical;
 }
   
-  /* Style the submit button with a specific background color etc */
 input[type=submit] {
     background-color: var(--c-text-color);
     color: white;
@@ -52,7 +51,6 @@ input[type=submit] {
     cursor: pointer;
 }
   
-  /* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
     background-color: var(--c-text-color-hover);
 }
