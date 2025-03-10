@@ -1,6 +1,21 @@
 @import url(main.css);
 @import url(normalize.css);
 
+/* ANIMATIONS */
+.fade{
+    animation-name: fade;
+    animation-duration: 2s;
+}
+@-webkit-keyframes fade{
+    from {opacity: .3;}
+    to {opacity: 1;}
+}
+@keyframes fade {
+    from {opacity: .3;}
+    to {opacity: 1;}
+}
+
+
 .slideshow-container{
     max-width: 100%;
     position: relative;
@@ -16,8 +31,23 @@
     height: 10rem;
 }
 
+
+
+
+
+
+
+
+
+/* MOBILE */
+@media (max-width:480px) {
+    #main_slider > .slides img{
+        height: 12rem;
+    }
+}
+
 /* TABLET */
-@media (max-width:800px) {
+@media (min-width:481px) and (max-width:768px) {
     #main_slider > .slides img{
         height: 18rem;
     }
@@ -26,24 +56,7 @@
     }
 }
 
-/* MOBILE */
-@media (max-width:400px) {
-    #main_slider > .slides img{
-        height: 12rem;
-    }
-    .rooms_info-layout > .room > .slideshow-container > .slides img{
-        height: 10rem;
-    }
-}
+/* DESKTOP */
+@media (min-width:769px){
 
-/* ANIMATIONS */
-
-
-.fade{
-    animation-name: fade;
-    animation-duration: 2s;
-}
-@keyframes fade {
-    from {opacity: .3;}
-    to {opacity: 1;}
 }
