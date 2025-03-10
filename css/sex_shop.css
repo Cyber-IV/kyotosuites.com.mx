@@ -15,20 +15,14 @@
     justify-content: center;
     align-items: center;
 }
-.sex_shop-image img{
-    max-width: 80%;
-}
+
 .sex_shop-quote{
-    font-size: 1.5vw;
     text-align: center;
     font-style: italic;
-    line-height: 1.75rem;
-    letter-spacing: .2rem;
+    letter-spacing: .15rem;
     color: var(--ss-text-color);
-    margin-bottom: 2rem;
 }
 .sex_shop-prod_list{
-    font-size: 1.25vw;
     text-align: center;
     color: white;
     list-style: none;
@@ -38,29 +32,12 @@
     display: inline;
     vertical-align: middle;
     padding-right: .75rem;
-    font-size: 2.25vw;
     color: var(--ss-text-color);
     text-shadow: 1px 1px 2px white;
 }
 
-/* TABLET */
-@media (max-width:800px) {
-    .sex_shop-image img{
-        max-width: 90%;
-    }
-    .sex_shop-quote{
-        font-size: 1.75vw;
-        line-height: 1rem;
-        margin-bottom: 1rem;
-    }
-    .sex_shop-prod_list{
-        font-size: 1.5vw;
-        letter-spacing: .15rem;
-    }
-}
-
 /* MOBILE */
-@media (max-width:400px) {
+@media (max-width:480px) {
     .sex_shop-description{
         display: block;
     }
@@ -69,9 +46,50 @@
     }
     .sex_shop-quote{
         font-size: 3.25vw;
-        line-height: 1rem;
+        line-height: .75rem;
+        margin-bottom: .75rem;
     }  
     .sex_shop-prod_list{
-        font-size: 2.75vw;
-    }      
+        font-size: 3vw;
+    }
+    .sex_shop-prod_list li i{
+        font-size: 4.5vw;
+    }
+}
+
+/* TABLET */
+@media (min-width:481px) and (max-width:768px) {
+    .sex_shop-image img{
+        max-width: 90%;
+    }
+    .sex_shop-quote{
+        font-size: 2vw;
+        line-height: 1rem;
+        margin-bottom: 1rem;
+    }
+    .sex_shop-prod_list{
+        font-size: 1.5vw;
+        letter-spacing: .15rem;
+    }
+    .sex_shop-prod_list li i{
+        font-size: 3.5vw;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:769px){
+    .sex_shop-image img{
+        max-width: 80%;
+    }
+    .sex_shop-quote{
+        font-size: 1.5vw;
+        line-height: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .sex_shop-prod_list{
+        font-size: 1.25vw;
+    }
+    .sex_shop-prod_list li i{
+        font-size: 2.5vw;
+    }
 }
