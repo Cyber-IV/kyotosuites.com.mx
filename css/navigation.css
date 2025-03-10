@@ -9,10 +9,7 @@
 
 header{
     display: block;
-
     background-color: var(--background_color);
-    padding: .5rem 12rem;
-    align-items: center;
 }
 
 .header_logo,
@@ -24,7 +21,7 @@ header{
 
 .navigation_menu{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 .navigation_menu li{
@@ -32,8 +29,6 @@ header{
 }
 .navigation_menu-logo{
     max-width: 8%;
-    margin: 0;
-    padding: 1rem;
     background-color: white;
     border-radius: 50%;
 }
@@ -41,16 +36,13 @@ header{
     max-width: 100%;
 }
 
-.navigation_menu-option{
-    font-size: 1.2vw;
-    margin: 0 ;
-}    
+   
 .navigation_menu-option a{
     color: var(--menu_option_color);
 }
 .navigation_menu-option a:hover, .navigation_menu-option a:focus{
     transition: .4s;
-    color: var(--highlight_color-hover);
+    color: white;
     cursor: pointer;
 }
 .navigation_menu-option .option_description{
@@ -59,28 +51,15 @@ header{
     letter-spacing: 1px;
 }
 
-
-/* TABLET */
-@media (max-width:800px) {
-    header{
-        padding: .5rem 1rem;
-    }
-
-    .navigation_menu-logo{
-        max-width: 8%;
-        margin: 0 .5rem;
-        padding: .6rem;
-    }
-
-    .navigation_menu-option{
-        font-size: 1.5vw;
-        margin: 0 1rem;
-    }    
-}
-
-
 /* MOBILE */
-@media (max-width:400px) {
+@media (max-width:480px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .25rem 1rem;
+    }
+
     .header_logo,
     .close_overlay-btn,
     .navigation_menu-option i,
@@ -88,10 +67,7 @@ header{
         display: block;
     }
 
-    header{
-        display: flex;
-        justify-content: space-between;
-    }
+
     .header_logo{
         max-width: 3rem;
     }
@@ -173,3 +149,34 @@ header{
     }
 }
 
+/* TABLET */
+@media (min-width:481px) and (max-width:768px) {
+    header{
+        padding: .5rem 1rem;
+    }
+
+    .navigation_menu-logo{
+        margin: 0 .5rem;
+        padding: .6rem;
+    }
+    .navigation_menu-option{
+        font-size: 1.5vw;
+        margin: 0 1rem;
+    }
+}
+
+/* DESKTOP */
+@media (min-width:769px){
+    header{
+        padding: .5rem 12rem;
+    }
+
+    .navigation_menu-logo{
+        margin: 0;
+        padding: 1rem;
+    }
+    .navigation_menu-option{
+        font-size: 1.25vw;
+        margin: 0;
+    } 
+}
