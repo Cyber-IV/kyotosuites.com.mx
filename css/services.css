@@ -5,6 +5,25 @@
     --font-color: white;
 }
 
+.animate-left{
+    position:relative;
+    animation: animateleft .75s
+}
+@keyframes animateleft{
+    from{left:-300px;opacity:0}
+    to{left:0;opacity:1}
+}
+.animate-right{
+    position:relative;
+    animation:animateright .75s
+}
+@keyframes animateright{
+    from{right:-300px;opacity:0}
+    to{right:0;opacity:1}
+}
+
+
+
 .services-container{
     max-width: 100%;
     background-color: var(--background-color);
