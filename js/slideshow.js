@@ -3,17 +3,6 @@ let slideshows_names =
 "room_relax-slider","room_jacuzzi-slider","room_double-slider",
 "room_premium-slider", "services_slider"];
 
-/* const rooms = document.getElementsByClassName("room");
-for(let i = 0; i < rooms.length; i++){
-    if(window.matchMedia("(max-width: 400px)").matches){
-        rooms[i].classList.add("slides");
-        rooms[i].classList.add("fade");
-    }else{
-        rooms[i].classList.remove("slides");
-        rooms[i].classList.remove("fade");
-    }
-} */
-
 slideshows_names.forEach((slideshow_name) => {
     var slideshow = document.getElementById(slideshow_name);
     let animationSeconds = 5000;
@@ -32,7 +21,5 @@ function showSlides(slideIndex, slideshow, animateTime){
     slideIndex++;
     if(slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "flex";
-/*     if(slideshow.id == "rooms_slider")
-    slides[slideIndex-1].style.display = "block"; */
     setTimeout(()=>{showSlides(slideIndex, slideshow, animateTime)},animateTime);
 }
