@@ -13,12 +13,12 @@ function debounce(func, delay) {
 window.addEventListener('resize', debounce(clear_services_slider(), 250), false);
 
 function clear_services_slider(){
-    const rooms = document.getElementsByClassName("service");
-    for(let i = 0; i < rooms.length; i++){
+    const services = document.getElementsByClassName("service");
+    for(let i = 0; i < services.length; i++){
         if(window.matchMedia("(max-width:480px)").matches){
-            rooms[i].classList.add("slides");
+            services[i].classList.add("slides");
         }else{
-            rooms[i].classList.remove("slides");
+            services[i].classList.remove("slides");
         }
     }
 }
