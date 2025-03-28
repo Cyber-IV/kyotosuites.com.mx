@@ -9,8 +9,12 @@ function debounce(func, delay) {
         }, delay);
     };
 }
-
-window.addEventListener('resize', debounce(clear_services_slider(), 250), false);
+function clear_classes(){
+    console.log("clear_classes");
+    clear_services_slider();
+}
+window.addEventListener('load', clear_classes(), false);
+window.addEventListener('resize', debounce(clear_classes, 250), false);
 
 function clear_services_slider(){
     const services = document.getElementsByClassName("service");

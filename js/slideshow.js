@@ -15,6 +15,7 @@ slideshows_names.forEach((slideshow_name) => {
 
 function showSlides(slideIndex, slideshow, animateTime){
     let slides = slideshow.getElementsByClassName("slides");
+    if(slides.length == 0) return;
     for(i = 0; i < slides.length; i++){
         slides[i].style.display = "none";
     }
