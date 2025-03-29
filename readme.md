@@ -1,21 +1,18 @@
-# Rediseño de página web de: kyotosuites.com.mx
+## Website Redesign of: kyotosuites.com.mx
+The project consists of a redesign currently (February 2025) of the website at kyotosuites.com.mx
 
-El proyecto consiste en un rediseño actualmente (February 2025) de la página que tiene el sitio kyotosuites.com.mx
+## Description
+It aims to be an improvement over the current site, featuring:
 
-## Descripción
+- Implementation of responsive web design
+- Visual corrections to carousels and their style
+- Online booking capability (not implemented yet)
+- Use of a free library for the location map
 
-Tiene el objetivo de verse como una mejora del sitio actual contando con:
-- Implementación de web responsive
-- Correcciones visuales de carruseles y su estilo
-- Posibilidad de reservación online (not implemented yet)
-- Uso de una librería de libre uso para el mapa de la localización del lugar
+## Technologies Used
+Programming Language: HTML5, CSS3, JS
+Database: MySQL (not implemented yet)
+Tools: VS Code, Git, Live Server
 
-## Tecnologías Usadas
-
-* **Lenguaje de programación:**  HTML5, CSS3, JS
-* **Base de datos:** MySQL (not implemented yet)
-* **Herramientas:** VS Code, Git, Live Server
-
-## Instalación
-
+## Installation
 git clone <url_del_repositorio>
