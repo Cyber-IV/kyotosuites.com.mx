@@ -13,7 +13,7 @@ Tiene el objetivo de verse como una mejora del sitio actual contando con:
 ## Tecnologías Usadas
 
 * **Lenguaje de programación:**  HTML5, CSS3, JS
-* **Base de datos:** MySQL(not implemented yet)
+* **Base de datos:** MySQL (not implemented yet)
 * **Herramientas:** VS Code, Git, Live Server
 
 ## Instalación
