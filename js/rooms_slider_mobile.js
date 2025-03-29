@@ -1,6 +1,6 @@
-window.addEventListener('load', onWndLoad, false);
+window.addEventListener('load', rooms_slider_mobile, false);
 
-function onWndLoad() {
+function rooms_slider_mobile() {
     var slider = document.getElementById('rooms_slider')
     var sliders = slider.children;
    
